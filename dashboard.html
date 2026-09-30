@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkTrack Dashboard</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="brand-mark">W</span> WorkTrack</div><nav><a href="index.html">Home</a><a href="tag.html?id=WT-000001">Public Tag</a></nav></header>
+<main class="container">
+  <div class="page-head"><div><span class="eyebrow">Demo workspace</span><h1>Dashboard</h1><p class="muted">Prototype data for a cleaning and inspection business.</p></div><button class="button primary" onclick="addAsset()">+ Add Asset</button></div>
+  <section class="stats">
+    <div class="stat"><span>Assets</span><strong id="assetCount">3</strong></div>
+    <div class="stat"><span>Inspections</span><strong>3</strong></div>
+    <div class="stat"><span>Cleanings</span><strong>3</strong></div>
+    <div class="stat"><span>Needs Attention</span><strong>1</strong></div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><h2>Assets</h2><input id="search" placeholder="Search rooms..." oninput="renderAssets()"></div>
+    <div id="assetList"></div>
+  </section>
+  <section class="panel">
+    <h2>Recent Activity</h2>
+    <div class="activity"><span class="dot good-dot"></span><div><b>Room 204 inspected</b><small>Passed · Today</small></div></div>
+    <div class="activity"><span class="dot good-dot"></span><div><b>Room 204 cleaned</b><small>Cleaned · Today</small></div></div>
+    <div class="activity"><span class="dot warn-dot"></span><div><b>Room 301 needs attention</b><small>Needs maintenance · Yesterday</small></div></div>
+  </section>
+</main>
+<script src="app.js"></script>
+<script>renderAssets();</script>
+</body>
+</html>
